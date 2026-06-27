@@ -28,21 +28,55 @@
       }
     }
 
-    /* Banner mit vollständig sichtbarem Bild (kein Zoom, nix abgeschnitten) */
+    /* Schlichter Gradient-Banner ohne Bild */
     .about-banner {
       width: 100%;
       height: 260px;
-      background-color: #020617; /* dunkler Hintergrund hinter dem Bild */
-      background-image: url("pics/ChatGPT Image May 4, 2026, 03_02_24 PM.png");
-      background-size: contain;      /* ganzes Bild anzeigen */
-      background-position: center center;
-      background-repeat: no-repeat;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(45, 212, 191, 0.16), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(56, 189, 248, 0.12), transparent 55%),
+        linear-gradient(to bottom right, #020617, #0b1120);
       border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .about-banner__inner {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 32px;
+      color: #e5e7eb;
+    }
+
+    .about-banner__eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 6px;
+    }
+
+    .about-banner__title {
+      font-size: clamp(26px, 3vw, 32px);
+      margin: 0 0 6px;
+      color: #f9fafb;
+    }
+
+    .about-banner__subtitle {
+      margin: 0;
+      max-width: 56ch;
+      font-size: 15px;
+      color: #cbd5f5;
     }
 
     @media (max-width: 768px) {
       .about-banner {
-        height: 200px;
+        height: 220px;
+      }
+      .about-banner__inner {
+        padding: 18px 16px 26px;
       }
     }
   </style>
@@ -76,8 +110,16 @@
     </div>
   </header>
 
-  <!-- BANNER -->
-  <section class="about-banner"></section>
+  <!-- BANNER (ohne Bilddatei) -->
+  <section class="about-banner">
+    <div class="about-banner__inner">
+      <span class="about-banner__eyebrow">Über mich</span>
+      <h1 class="about-banner__title">Digitalisierung, die im Alltag funktioniert.</h1>
+      <p class="about-banner__subtitle">
+        Technischer Support, Cloud-Kommunikation und KI-Sprachassistenten – mit Praxisfokus von Deutschland bis Davao City.
+      </p>
+    </div>
+  </section>
 
   <!-- INTRO -->
   <section class="section">
@@ -102,7 +144,7 @@
         </div>
         <div>
           <span class="eyebrow">Über mich</span>
-          <h1>Digitalisierung, die im Alltag funktioniert.</h1>
+          <h2>Digitalisierung, die im Alltag funktioniert.</h2>
           <p class="lead">Ich unterstütze Unternehmen bei Einführung, Optimierung und Betrieb moderner Cloud-Kommunikationslösungen – mit Schwerpunkt auf Webex, Placetel und KI-gestützten Sprachassistenten.</p>
           <p>Mein Fokus liegt auf der technischen Inbetriebnahme, dem Troubleshooting sowie der Konzeption und Implementierung intelligenter Telefonie-Workflows. Dabei verbinde ich klassische Support-Kompetenz mit modernen Automatisierungslösungen, die die Erreichbarkeit verbessern, administrative Aufwände reduzieren und Prozesse effizienter gestalten.</p>
           <p>Ein besonderer Schwerpunkt ist die Entwicklung maßgeschneiderter KI-Sprachassistenten für Placetel-Cloud-Telefonanlagen – von der Analyse der Kundenanforderungen über die technische Architektur und Backend-Konfiguration bis hin zu Testphasen, Optimierung und Live-Betrieb.</p>
