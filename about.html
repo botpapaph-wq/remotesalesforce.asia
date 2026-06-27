@@ -28,26 +28,22 @@
       }
     }
 
-    /* Banner: Breite bleibt, Ausschnitt nach oben verschoben */
+    /* Banner: Bild vollständig sichtbar, zentriert, nicht beschnitten */
     .about-banner {
       width: 100%;
-      aspect-ratio: 16 / 9;
-      max-height: 360px;
-      min-height: 200px;
+      height: 260px; /* passe diesen Wert nur an, wenn du den Streifen höher/flacher willst */
 
-      background-color: #020617;
       background-image: url("pics/ChatGPT Image May 4, 2026, 03_02_24 PM.png");
-      background-size: cover;
-      background-position: center 10%; /* mehr oben sichtbar */
       background-repeat: no-repeat;
+      background-position: center center;  /* zentriert auf X und Y [web:129] */
+      background-size: contain;           /* gesamtes Bild sichtbar, kein Beschnitt [web:161][web:180][web:163] */
+      background-color: #020617;          /* füllt evtl. Ränder sauber */
       border-bottom: 1px solid rgba(148, 163, 184, 0.18);
     }
 
     @media (max-width: 768px) {
       .about-banner {
-        max-height: 260px;
-        min-height: 180px;
-        background-position: center 15%; /* auf Mobile etwas weiter nach unten */
+        height: 220px;
       }
     }
   </style>
@@ -81,7 +77,7 @@
     </div>
   </header>
 
-  <!-- BANNER: nur Bild, nach oben verschobener Ausschnitt -->
+  <!-- BANNER: komplettes Bild, zentriert -->
   <section class="about-banner"></section>
 
   <!-- INTRO -->
