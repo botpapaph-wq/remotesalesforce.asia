@@ -1,4 +1,3 @@
-dex · HTML
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,9 +7,60 @@ dex · HTML
   <meta name="description" content="Wir bauen den B2B-Glasfaser-Vertrieb aus und suchen echte Vertriebs-Hunter – 100 % Remote, als Freelancer, mit Profi-Infrastruktur ab Tag 1. Plus: Resümee-Check, Resümee-Writing und Bewerber-Coaching." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- ================= FLOATING PILL BADGE (neu) ================= -->
+  <style>
+    .floating-pill {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 9999;
+
+      padding: 10px 20px;
+      border-radius: 999px;
+
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+
+      color: #ffffff;
+      background: rgba(15, 15, 20, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+      opacity: 0;
+      transform: translateY(-6px);
+      animation: pillFadeIn 0.6s ease-out forwards 0.2s;
+    }
+
+    @keyframes pillFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .floating-pill {
+        top: 16px;
+        right: 16px;
+        padding: 8px 14px;
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
- 
+
+  <!-- === Floating Pill Badge (neu) === -->
+  <div class="floating-pill">
+    1,5–2,5 % Performer Only · Expansion: Spain & Austria
+  </div>
+
   <!-- ================= HEADER / NAV ================= -->
   <header class="site-header">
     <div class="container nav">
@@ -37,7 +87,7 @@ dex · HTML
       </nav>
     </div>
   </header>
- 
+
   <!-- ================= BANNER ================= -->
   <section class="banner" style="--banner-img: url('pics/Gemini_Generated_Image_k8p3z2k8p3z2k8p3.png');">
     <div class="container">
@@ -52,18 +102,18 @@ dex · HTML
       </div>
     </div>
   </section>
- 
+
   <!-- ================= JOBPOST ================= -->
   <section class="section" id="jobpost">
     <div class="container">
       <img class="jobpost__img" src="pics/Gemini_Generated_Image_xgiolhxgiolhxgio.png" alt="B2B-Vertrieb 100 % Remote – arbeite von überall auf der Welt" loading="lazy" />
- 
+
       <div class="jobpost__card">
         <span class="eyebrow">Freelance · 100 % Remote · DACH-Markt</span>
         <h2>Schluss mit dem Sommerloch. Lass uns das Business hochfahren.</h2>
         <p>Aktuell bauen wir den B2B-Glasfaser-Vertrieb massiv aus. Du agierst zu 100 % als Freelancer und bist dein eigener Chef – vollkommen ortsunabhängig, von überall auf der Welt, wo es stabiles Internet gibt (ich selbst lebe und arbeite aus Davao City, PH 🇵🇭).</p>
         <p><strong>Wichtig:</strong> Die Position findet aktuell im <strong>deutschen B2B-Markt</strong> statt – Auftraggeber ist ein <strong>deutsches Unternehmen</strong>. Deutsch auf C1-Niveau ist daher Pflicht.</p>
- 
+
         <div class="cols">
           <div>
             <h3>Was wir dir bieten</h3>
@@ -83,12 +133,12 @@ dex · HTML
             </ul>
           </div>
         </div>
- 
+
         <a href="kontakt.html" class="btn btn--primary">Interesse? Schick mir dein Profil →</a>
       </div>
     </div>
   </section>
- 
+
   <!-- ================= BEWERBER-SERVICES ================= -->
   <section class="section section--soft" id="leistungen">
     <div class="container">
@@ -97,7 +147,7 @@ dex · HTML
         <h2>Hol mehr aus deiner Bewerbung heraus</h2>
         <p class="lead">Egal ob du dich bei uns oder anderswo bewirbst: Ein starkes Resümee und ein souveränes Interview entscheiden. Diese Services biete ich dir direkt an.</p>
       </div>
- 
+
       <div class="cards">
         <div class="card">
           <div class="card__icon" aria-hidden="true">
@@ -108,7 +158,7 @@ dex · HTML
           <div class="price">25 <span>USD</span></div>
           <a href="kontakt.html?service=resumee-check" class="btn btn--outline">Check anfragen</a>
         </div>
- 
+
         <div class="card">
           <div class="card__icon" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
@@ -118,7 +168,7 @@ dex · HTML
           <div class="price">50 <span>USD</span></div>
           <a href="kontakt.html?service=resumee-writing" class="btn btn--outline">Resümee schreiben lassen</a>
         </div>
- 
+
         <div class="card">
           <div class="card__icon" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l5 5-5 5"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></svg>
@@ -131,7 +181,7 @@ dex · HTML
       </div>
     </div>
   </section>
- 
+
   <!-- ================= CTA STRIP ================= -->
   <section class="section">
     <div class="container">
@@ -145,7 +195,7 @@ dex · HTML
       </div>
     </div>
   </section>
- 
+
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="container">
@@ -180,7 +230,7 @@ dex · HTML
       </div>
     </div>
   </footer>
- 
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>
