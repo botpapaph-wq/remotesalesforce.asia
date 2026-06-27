@@ -27,6 +27,61 @@
         margin-inline: auto;
       }
     }
+
+    /* About-Banner mit Hintergrundbild */
+    .about-banner {
+      position: relative;
+      width: 100%;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      color: #f9fafb;
+      background-image: linear-gradient(
+          to bottom,
+          rgba(15, 23, 42, 0.7),
+          rgba(15, 23, 42, 0.8)
+        ),
+        url("pics/ChatGPT Image May 4, 2026, 03_02_24 PM.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .about-banner__inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 16px;
+    }
+
+    .about-banner__eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a5b4fc;
+      margin-bottom: 10px;
+    }
+
+    .about-banner__title {
+      font-size: clamp(26px, 3vw, 32px);
+      margin: 0 0 8px;
+    }
+
+    .about-banner__subtitle {
+      margin: 0;
+      max-width: 52ch;
+      color: #e5e7eb;
+      font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .about-banner {
+        min-height: 220px;
+      }
+      .about-banner__inner {
+        padding: 40px 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -58,6 +113,17 @@
     </div>
   </header>
 
+  <!-- ABOUT-BANNER MIT HINTERGRUNDBILD -->
+  <section class="about-banner">
+    <div class="about-banner__inner">
+      <span class="about-banner__eyebrow">Über mich</span>
+      <h1 class="about-banner__title">Digitalisierung, die im Alltag funktioniert.</h1>
+      <p class="about-banner__subtitle">
+        Technischer Support, Cloud-Kommunikation und KI-Sprachassistenten – mit Praxisfokus von Deutschland bis Davao City.
+      </p>
+    </div>
+  </section>
+
   <!-- INTRO -->
   <section class="section">
     <div class="container">
@@ -81,7 +147,7 @@
         </div>
         <div>
           <span class="eyebrow">Über mich</span>
-          <h1>Digitalisierung, die im Alltag funktioniert.</h1>
+          <h2>Digitalisierung, die im Alltag funktioniert.</h2>
           <p class="lead">Ich unterstütze Unternehmen bei Einführung, Optimierung und Betrieb moderner Cloud-Kommunikationslösungen – mit Schwerpunkt auf Webex, Placetel und KI-gestützten Sprachassistenten.</p>
           <p>Mein Fokus liegt auf der technischen Inbetriebnahme, dem Troubleshooting sowie der Konzeption und Implementierung intelligenter Telefonie-Workflows. Dabei verbinde ich klassische Support-Kompetenz mit modernen Automatisierungslösungen, die die Erreichbarkeit verbessern, administrative Aufwände reduzieren und Prozesse effizienter gestalten.</p>
           <p>Ein besonderer Schwerpunkt ist die Entwicklung maßgeschneiderter KI-Sprachassistenten für Placetel-Cloud-Telefonanlagen – von der Analyse der Kundenanforderungen über die technische Architektur und Backend-Konfiguration bis hin zu Testphasen, Optimierung und Live-Betrieb.</p>
