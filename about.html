@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
-head>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Über mich – Bodo Kopplin | remoteSalesForce.asia</title>
@@ -28,15 +28,16 @@ head>
       }
     }
 
-    /* Banner: rausgezoomt (~15 % kleiner als volle Breite) */
+    /* Banner: fixes 16:9 Verhältnis, nur Bild, kein Text */
     .about-banner {
       width: 100%;
-      height: min(22vw, 260px);
-      min-height: 160px;
+      aspect-ratio: 16 / 9; /* sauberes Seitenverhältnis wie professionelles Hero-Bild */
+      max-height: 360px;
+      min-height: 200px;
+
       background-color: #020617;
       background-image: url("pics/ChatGPT Image May 4, 2026, 03_02_24 PM.png");
-      /* kleiner als 100% -> rauszoomen */
-      background-size: 85% auto;
+      background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
       border-bottom: 1px solid rgba(148, 163, 184, 0.18);
@@ -44,8 +45,8 @@ head>
 
     @media (max-width: 768px) {
       .about-banner {
-        height: 180px;
-        background-size: 90% auto;
+        max-height: 260px;
+        min-height: 180px;
         background-position: center center;
       }
     }
@@ -80,7 +81,7 @@ head>
     </div>
   </header>
 
-  <!-- BANNER: nur Bild, rausgezoomt -->
+  <!-- BANNER: nur Bild, 16:9 -->
   <section class="about-banner"></section>
 
   <!-- INTRO -->
@@ -179,7 +180,7 @@ head>
       <div class="cta-strip">
         <h2>Lass uns sprechen</h2>
         <p>Ob Bewerbung für den B2B-Vertrieb oder Interesse an Resümee- und Interview-Services – ich freue mich auf deine Nachricht.</p>
-        <div style="margin-top:22px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap%;">
+        <div style="margin-top:22px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
           <a href="kontakt.html" class="btn btn--primary">Kontakt aufnehmen</a>
           <a href="index.html#leistungen" class="btn btn--ghost">Bewerber-Services</a>
         </div>
