@@ -1,0 +1,13 @@
+# Sensible Projektdaten – nicht ins Repo
+Domain_Hosting_Infos.md
+
+# Quell-/Arbeitsdateien, die nicht auf die Live-Site gehören
+FB und LinkedIn Jobpost*.md
+FB und LinkedIn Jobpost*.txt
+Mein LinkedIn Profil.pdf
+
+# OS-/Editor-Kram
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp

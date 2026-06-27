@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt & Bewerbung | remoteSalesForce.asia</title>
+  <meta name="description" content="Bewirb dich für den B2B-Glasfaservertrieb oder frage Resümee- und Coaching-Services an. Kontaktformular und direkte E-Mail." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="remoteSalesForce.asia Startseite">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="#0d9488"/>
+          <circle cx="16" cy="16" r="3.2" fill="#fff"/>
+          <path d="M10 16a6 6 0 0 1 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M7 16a9 9 0 0 1 9-9" stroke="#99f6e4" stroke-width="2" stroke-linecap="round"/>
+          <path d="M22 16a6 6 0 0 1-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M25 16a9 9 0 0 1-9 9" stroke="#99f6e4" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>remote<span class="dot">Sales</span>Force<span class="tld">.asia</span></span>
+      </a>
+      <nav>
+        <button class="nav-toggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+          <li><a href="index.html#jobpost">Die Position</a></li>
+          <li><a href="index.html#leistungen">Bewerber-Services</a></li>
+          <li><a href="about.html">Über mich</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="kontakt.html" class="btn btn--brand nav-cta">Jetzt bewerben</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="cols" style="align-items:start;">
+        <div>
+          <span class="eyebrow">Kontakt</span>
+          <h1>Schreib mir.</h1>
+          <p class="lead">Bewirb dich für den B2B-Vertrieb oder frage einen der Bewerber-Services an. Ich melde mich persönlich zurück.</p>
+          <ul class="facts" style="margin-top:24px;">
+            <li><b>E-Mail</b><span><a href="mailto:bodo@remotesalesforce.asia">bodo@remotesalesforce.asia</a></span></li>
+            <li><b>Telefon Asien</b><span><a href="tel:+639606865887">+63 960 686 5887</a></span></li>
+            <li><b>Mobil EU</b><span><a href="tel:+491743282867">+49 174 3282867</a></span></li>
+            <li><b>Standort</b><span>Davao City, Philippinen 🇵🇭</span></li>
+            <li><b>Services</b><span>Resümee-Check 25 USD · Resümee-Writing 50 USD · Coaching 45 Min 50 USD</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="notice">
+            <strong>Hinweis:</strong> Das Formular wird in Kürze aktiviert (Anbindung an unsere Datenbank). Bis dahin erreichst du mich direkt per E-Mail an
+            <a href="mailto:bodo@remotesalesforce.asia">bodo@remotesalesforce.asia</a>.
+          </div>
+
+          <!-- Supabase-ready: data-contact-form wird in main.js abgefangen.
+               Spaeter ersetzt der Supabase-Insert den Platzhalter-Handler. -->
+          <form data-contact-form novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name *</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">E-Mail *</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="service">Worum geht es?</label>
+              <select id="service" name="service">
+                <option value="bewerbung">Bewerbung B2B-Vertrieb</option>
+                <option value="resumee-check">Resümee-Check (25 USD)</option>
+                <option value="resumee-writing">Resümee-Writing (50 USD)</option>
+                <option value="coaching">Bewerber-Coaching (50 USD / 45 Min)</option>
+                <option value="sonstiges">Sonstiges</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="nachricht">Nachricht *</label>
+              <textarea id="nachricht" name="nachricht" rows="6" required placeholder="Erzähl mir kurz von dir und deinem Anliegen."></textarea>
+            </div>
+
+            <div class="field">
+              <label style="font-weight:400;font-size:.9rem;display:flex;gap:10px;align-items:flex-start;">
+                <input type="checkbox" name="consent" required style="margin-top:5px;width:auto;" />
+                <span>Ich habe die <a href="datenschutz.html">Datenschutzhinweise</a> gelesen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage einverstanden. *</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Nachricht senden</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">* Pflichtfelder</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="brand" style="color:#fff;"><span>remote<span class="dot">Sales</span>Force<span class="tld" style="color:#94a3b8;">.asia</span></span></span>
+          <p style="margin-top:14px;max-width:42ch;color:#94a3b8;">B2B-Vertrieb. 100 % Remote. Plus Resümee- und Interview-Services für Talente weltweit.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#jobpost">Die Position</a></li>
+            <li><a href="index.html#leistungen">Bewerber-Services</a></li>
+            <li><a href="about.html">Über mich</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Rechtliches</h4>
+          <ul class="footer-links">
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="agb.html">AGB</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> remoteSalesForce.asia · Bodo Kopplin</span>
+        <span>Made remotely from Davao City 🇵🇭</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
