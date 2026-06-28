@@ -28,7 +28,7 @@
       }
     }
 
-    /* Banner: Breite bleibt, Ausschnitt nach oben verschoben */
+    /* Banner */
     .about-banner {
       width: 100%;
       aspect-ratio: 16 / 9;
@@ -38,7 +38,7 @@
       background-color: #020617;
       background-image: url("pics/ChatGPT Image May 4, 2026, 03_02_24 PM.png");
       background-size: cover;
-      background-position: center 30%; /* mehr oben sichtbar */
+      background-position: center 30%;
       background-repeat: no-repeat;
       border-bottom: 1px solid rgba(148, 163, 184, 0.18);
     }
@@ -47,8 +47,45 @@
       .about-banner {
         max-height: 370px;
         min-height: 180px;
-        background-position: center 50%; /* auf Mobile etwas weiter nach unten */
+        background-position: center 50%;
       }
+    }
+
+    /* LinkedIn-Button */
+    .linkedin-block {
+      max-width: 760px;
+      margin-top: 28px;
+    }
+
+    .btn-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid #0ea5e9;
+      background: #0b1120;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.55);
+    }
+
+    .btn-linkedin:hover {
+      background: #0369a1;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.7);
+    }
+
+    .btn-linkedin svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .btn-linkedin span {
+      white-space: nowrap;
     }
   </style>
 </head>
@@ -81,7 +118,7 @@
     </div>
   </header>
 
-  <!-- BANNER: nur Bild, nach oben verschobener Ausschnitt -->
+  <!-- BANNER -->
   <section class="about-banner"></section>
 
   <!-- INTRO -->
@@ -118,58 +155,22 @@
     </div>
   </section>
 
-  <!-- WERDEGANG -->
+  <!-- LINKEDIN-BUTTON STATT WERDEGANG -->
   <section class="section section--soft">
     <div class="container">
-      <span class="eyebrow">Werdegang</span>
-      <h2>Berufserfahrung</h2>
-      <div style="max-width:760px;margin-top:28px;">
-        <ul class="timeline">
-          <li>
-            <div class="meta">März 2026 – heute · Paderborn, DE</div>
-            <div class="role">Technischer Support-Mitarbeiter – Haus IT Service u. Vertrieb (Mentor GmbH)</div>
-            <p>Technischer Support für Cloud-Kommunikation (Placetel, Webex, KI-Sprachassistenten): Inbetriebnahme und Betreuung für Geschäftskunden, Konzeption und Optimierung von KI-Sprachassistenten, Störungsanalyse, CRM-Integration sowie Begleitung von Glasfaser- und B2B-Projekten inkl. Tests und Produktivsetzung.</p>
-          </li>
-          <li>
-            <div class="meta">März 2021 – Mai 2026 · Philippinen</div>
-            <div class="role">Gründer – HomeOffice Worldwide</div>
-            <p>Unterstützung von Menschen dabei, in der digitalen Arbeitswelt Klarheit und Selbstvertrauen zu gewinnen: Microsoft 365, Google Workspace, Präsentationstechniken und strukturierte Vorbereitung auf den modernen Arbeitsmarkt.</p>
-          </li>
-          <li>
-            <div class="meta">Nov 2025 – März 2026 · Hannover</div>
-            <div class="role">Educational Support – velpTEC edutainment</div>
-            <p>Begleitung von Kursteilnehmenden in geförderten Weiterbildungen zur digitalen Büroorganisation mit Microsoft 365 – Support per E-Mail und MS-Teams-Live-Chat.</p>
-          </li>
-          <li>
-            <div class="meta">Mai 2025 – Sep 2025 · Lissabon</div>
-            <div class="role">CS Representative (DE/EN) – Catawiki</div>
-            <p>Bearbeitung von Käufer- und Verkäuferanfragen mit Schwerpunkt Rechnungs- und Logistikfragen, inkl. Sendungsrecherche und sorgfältiger Dokumentation.</p>
-          </li>
-          <li>
-            <div class="meta">Okt 2024 – Mai 2025 · Lissabon</div>
-            <div class="role">Internet Ads Assessor – TELUS Digital</div>
-          </li>
-          <li>
-            <div class="meta">Apr 2024 – Nov 2024 · Lissabon</div>
-            <div class="role">Associate Connectivity & NW Engineer – Capgemini Engineering</div>
-            <p>Ordermanagement von Ersatzteilen für einen namhaften Mobilfunk- und Kabelanbieter in Deutschland, 24/7 remote.</p>
-          </li>
-          <li>
-            <div class="meta">Sep 2023 – Apr 2024 · Lissabon</div>
-            <div class="role">IT-Helpdesk-Support – Fujitsu</div>
-            <p>1st-Level-IT-Support als erster Ansprechpartner für Mitarbeitende eines namhaften deutschen Unternehmens.</p>
-          </li>
-          <li>
-            <div class="meta">Mai 2022 – Aug 2023 · Lissabon</div>
-            <div class="role">Regulator – Webhelp</div>
-            <p>Backoffice für die Rechtsabteilung einer britischen Airline: Bearbeitung von Fluggastansprüchen, Korrespondenz mit Kanzleien der DACH-Region.</p>
-          </li>
-          <li>
-            <div class="meta">2007 – 2021 · DE / CH / TH</div>
-            <div class="role">Unternehmer & Bauleitung (MSK Montageservice Kopplin, Hunziker AG)</div>
-            <p>Über ein Jahrzehnt Selbstständigkeit und Führungsverantwortung im internationalen Messe-, Event- und Baubereich – inkl. Akquise, Rechnungsstellung und Teamleitung.</p>
-          </li>
-        </ul>
+      <span class="eyebrow">Vernetzung</span>
+      <h2>Mehr über meinen Werdegang</h2>
+      <div class="linkedin-block">
+        <p>Eine ausführliche Übersicht meiner beruflichen Stationen, Projekte und Empfehlungen findest du auf meinem LinkedIn‑Profil.</p>
+        <div style="margin-top:18px;">
+          <a href="https://www.linkedin.com/in/b-kopplin/" class="btn-linkedin" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="4" fill="#0a66c2"></rect>
+              <path d="M7.1 17h2V10.5h-2V17zm1-7.4a1.16 1.16 0 1 0-1.16-1.16A1.16 1.16 0 0 0 8.1 9.6zM11 17h2v-3.7c0-1 .4-1.6 1.27-1.6.76 0 1.13.52 1.13 1.6V17h2v-4.1c0-2-1.06-3-2.55-3a2.22 2.22 0 0 0-2 1.1h-.03l.07-1H11c.03.68 0 7 0 7z" fill="#fff"></path>
+            </svg>
+            <span>Profil auf LinkedIn ansehen</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
