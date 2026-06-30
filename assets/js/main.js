@@ -1,5 +1,5 @@
 /* remotesalesforce.asia – main.js
-   Version 0.3 – 2026-06-29 – Bodo Kopplin */
+   Version 0.4 – 2026-06-30 – Bodo Kopplin */
 (function () {
   "use strict";
 
@@ -17,6 +17,21 @@
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
+
+  // Dropdown per URL-Parameter vorauswählen (?service=resumee-check etc.)
+  var serviceSelect = document.querySelector("#service");
+  if (serviceSelect) {
+    var serviceMap = {
+      "resumee-check":   "Resümee-Check (25 USD)",
+      "resumee-writing": "Resümee-Writing (50 USD)",
+      "coaching":        "Bewerber-Coaching (50 USD / 45 Min)",
+      "bewerbung":       "Bewerbung B2B-Vertrieb"
+    };
+    var urlParam = new URLSearchParams(window.location.search).get("service");
+    if (urlParam && serviceMap[urlParam]) {
+      serviceSelect.value = serviceMap[urlParam];
+    }
+  }
 
   // Kontaktformular → mailto
   var form = document.querySelector("[data-contact-form]");
