@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bewerbung B2B-Vertrieb – Hunter-Filter | remoteSalesForce.asia</title>
+  <meta name="description" content="Vorselektions-Fragebogen für die B2B-Glasfaservertrieb-Position. Nur wer alle Pflichtkriterien erfüllt, kann die Bewerbung absenden." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .qfield { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:22px 24px; margin-bottom:18px; }
+    .qfield legend { font-weight:700; color:var(--ink); padding:0 4px; font-size:1rem; }
+    .qfield .qhint { font-size:.85rem; color:var(--muted); margin:2px 0 14px; }
+    .opt { display:flex; align-items:flex-start; gap:10px; padding:8px 0; cursor:pointer; }
+    .opt input { margin-top:4px; width:auto; }
+    .opt span { font-size:.96rem; }
+    .term-inputs { display:grid; grid-template-columns:1fr; gap:10px; margin-top:12px; }
+    .term-inputs input { font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:8px; }
+    .decision-box { border-radius:var(--radius); padding:22px 24px; margin-top:20px; font-size:.98rem; display:none; }
+    .decision-box.pass { background:#ecfdf5; border:1px solid #6ee7b7; color:#065f46; display:block; }
+    .decision-box.fail { background:#fef2f2; border:1px solid #fecaca; color:#991b1b; display:block; }
+    .decision-box h3 { margin-top:0; color:inherit; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="remoteSalesForce.asia Startseite">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="#0d9488"/>
+          <circle cx="16" cy="16" r="3.2" fill="#fff"/>
+          <path d="M10 16a6 6 0 0 1 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M7 16a9 9 0 0 1 9-9" stroke="#99f6e4" stroke-width="2" stroke-linecap="round"/>
+          <path d="M22 16a6 6 0 0 1-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M25 16a9 9 0 0 1-9 9" stroke="#99f6e4" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>remote<span class="dot">Sales</span>Force<span class="tld">.asia</span></span>
+      </a>
+      <nav>
+        <button class="nav-toggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+          <li><a href="index.html#jobpost">Die Position</a></li>
+          <li><a href="index.html#leistungen">Bewerber-Services</a></li>
+          <li><a href="about.html">Über mich</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="bewerbung.html" class="btn btn--brand nav-cta">Jetzt bewerben</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Bewerbung B2B-Vertrieb</span>
+      <h1>Hunter-Filter</h1>
+      <p class="lead">Bevor du deine Bewerbung sendest, beantworte bitte die folgenden Pflichtfragen. Sie entscheiden, ob die Position zu dir passt – ehrliche Antworten sparen uns beiden Zeit.</p>
+
+      <form id="hunter-form" novalidate style="margin-top:32px;">
+
+        <fieldset class="qfield">
+          <legend>1. Hardware &amp; Setup *</legend>
+          <p class="qhint">Alle vier Punkte müssen zutreffen.</p>
+          <label class="opt"><input type="checkbox" name="q1" value="win11" /><span>Windows 11 Pro</span></label>
+          <label class="opt"><input type="checkbox" name="q1" value="ram" /><span>Mindestens 8 GB RAM</span></label>
+          <label class="opt"><input type="checkbox" name="q1" value="internet" /><span>Stabile Internetverbindung</span></label>
+          <label class="opt"><input type="checkbox" name="q1" value="hardware" /><span>Eigene funktionierende Hardware</span></label>
+        </fieldset>
+
+        <fieldset class="qfield">
+          <legend>2. Vergütung &amp; Mindset *</legend>
+          <p class="qhint">Bist du bereit, 100&nbsp;% erfolgsorientiert zu arbeiten (kein Fixum)?</p>
+          <label class="opt"><input type="radio" name="q2" value="ja" required /><span>Ja, ich will verdienen und liefern.</span></label>
+          <label class="opt"><input type="radio" name="q2" value="nein" /><span>Nein, ich brauche ein Fixum.</span></label>
+        </fieldset>
+
+        <fieldset class="qfield">
+          <legend>3. Eigenverantwortung *</legend>
+          <p class="qhint">Wie arbeitest du am liebsten?</p>
+          <label class="opt"><input type="radio" name="q3" value="ja" required /><span>Eigenverantwortlich, ergebnisorientiert, ohne Babysitter.</span></label>
+          <label class="opt"><input type="radio" name="q3" value="nein" /><span>Ich brauche klare Vorgaben, Struktur und tägliche Anleitung.</span></label>
+        </fieldset>
+
+        <fieldset class="qfield">
+          <legend>4. Motivation *</legend>
+          <p class="qhint">Warum willst du in den B2B-Vertrieb?</p>
+          <label class="opt"><input type="radio" name="q4" value="ja" required /><span>Wegen Leistung, Provision und Wachstum.</span></label>
+          <label class="opt"><input type="radio" name="q4" value="nein" /><span>Wegen Sicherheit, Routine oder „irgendein Job“.</span></label>
+        </fieldset>
+
+        <fieldset class="qfield">
+          <legend>5. Erfahrung</legend>
+          <p class="qhint">Hast du Erfahrung in Telekommunikation / Glasfaser? (Kein Ausschlusskriterium)</p>
+          <label class="opt"><input type="radio" name="q5" value="ja" required /><span>Ja</span></label>
+          <label class="opt"><input type="radio" name="q5" value="nein" /><span>Nein</span></label>
+        </fieldset>
+
+        <fieldset class="qfield">
+          <legend>6. Sprachkompetenz *</legend>
+          <p class="qhint">Welches Deutschniveau hast du?</p>
+          <label class="opt"><input type="radio" name="q6" value="c1" required /><span>C1</span></label>
+          <label class="opt"><input type="radio" name="q6" value="b2" /><span>B2</span></label>
+          <label class="opt"><input type="radio" name="q6" value="b1" /><span>B1</span></label>
+          <label class="opt"><input type="radio" name="q6" value="a" /><span>A-Niveau</span></label>
+        </fieldset>
+
+        <fieldset class="qfield">
+          <legend>7. Terminverfügbarkeit *</legend>
+          <p class="qhint">Kannst du drei mögliche Termine zwischen 08:00 und 15:00 deutscher Zeit nennen?</p>
+          <label class="opt"><input type="radio" name="q7" value="ja" required /><span>Ja</span></label>
+          <label class="opt"><input type="radio" name="q7" value="nein" /><span>Nein</span></label>
+          <div class="term-inputs" id="term-inputs">
+            <input type="text" name="termin1" placeholder="Terminvorschlag 1 (z. B. Mo 09:00)" />
+            <input type="text" name="termin2" placeholder="Terminvorschlag 2" />
+            <input type="text" name="termin3" placeholder="Terminvorschlag 3" />
+          </div>
+        </fieldset>
+
+        <fieldset class="qfield">
+          <legend>8. Tools &amp; Infrastruktur *</legend>
+          <p class="qhint">Bist du bereit, mit MS-365, MS Dynamics 365 und Webex zu arbeiten?</p>
+          <label class="opt"><input type="radio" name="q8" value="ja" required /><span>Ja</span></label>
+          <label class="opt"><input type="radio" name="q8" value="nein" /><span>Nein</span></label>
+        </fieldset>
+
+        <fieldset class="qfield">
+          <legend>9. Auszahlung *</legend>
+          <p class="qhint">Kannst du Provisionen in EUR über IBAN oder Wise empfangen?</p>
+          <label class="opt"><input type="radio" name="q9" value="ja" required /><span>Ja</span></label>
+          <label class="opt"><input type="radio" name="q9" value="nein" /><span>Nein</span></label>
+        </fieldset>
+
+        <fieldset class="qfield">
+          <legend>10. Abschlussfrage *</legend>
+          <p class="qhint">Was bedeutet für dich Leistung?</p>
+          <textarea name="q10" rows="4" minlength="20" required placeholder="Freitext, mindestens 20 Zeichen."></textarea>
+        </fieldset>
+
+        <fieldset class="qfield">
+          <legend>Kontaktdaten *</legend>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">E-Mail *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+          <label style="font-weight:400;font-size:.9rem;display:flex;gap:10px;align-items:flex-start;">
+            <input type="checkbox" name="consent" required style="margin-top:5px;width:auto;" />
+            <span>Ich habe die <a href="datenschutz.html">Datenschutzhinweise</a> gelesen und bin mit der Verarbeitung meiner Angaben einverstanden. *</span>
+          </label>
+        </fieldset>
+
+        <!-- Honeypot gegen einfache Bots, für Menschen unsichtbar -->
+        <div style="position:absolute;left:-9999px;" aria-hidden="true">
+          <label>Firma<input type="text" name="company_hp" tabindex="-1" autocomplete="off" /></label>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Antworten prüfen &amp; Bewerbung senden</button>
+        <p class="form-note">* Pflichtfelder. Der Lebenslauf-Anhang muss der sich öffnenden E-Mail vor dem Absenden manuell hinzugefügt werden (aus Browser-Sicherheitsgründen ist ein automatischer Datei-Anhang per mailto nicht möglich).</p>
+      </form>
+
+      <div id="decision" class="decision-box"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="brand" style="color:#fff;"><span>remote<span class="dot">Sales</span>Force<span class="tld" style="color:#94a3b8;">.asia</span></span></span>
+          <p style="margin-top:14px;max-width:42ch;color:#94a3b8;">B2B-Vertrieb. 100 % Remote. Plus Resümee- und Interview-Services für Talente weltweit.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#jobpost">Die Position</a></li>
+            <li><a href="index.html#leistungen">Bewerber-Services</a></li>
+            <li><a href="about.html">Über mich</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Rechtliches</h4>
+          <ul class="footer-links">
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="agb.html">AGB</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> remoteSalesForce.asia · Bodo Kopplin</span>
+        <span>Made with love ❤️ in Davao City, Philippines 🇵🇭</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* bewerbung.html – Hunter-Filter Vorselektion
+       Version 1.0 – 2026-07-01 – Bodo Kopplin
+
+       WICHTIG: Diese Prüfung läuft rein clientseitig (JS im Browser).
+       Sie dient als Selbstselektions-Hürde, ist aber technisch umgehbar
+       (DOM-Manipulation, deaktiviertes JS). Für eine harte serverseitige
+       Gate-Funktion siehe TODO bei WEBHOOK_URL weiter unten. */
+    (function () {
+      "use strict";
+
+      // TODO: Durch echte Webhook-URL ersetzen (z. B. Make.com-Szenario),
+      // um Antworten automatisch in ein Sheet/CRM zu loggen und/oder
+      // qualifizierte Bewerbungen per Mail an dich weiterzuleiten.
+      // Solange der Platzhalter steht, wird NUR mailto: verwendet.
+      var WEBHOOK_URL = ""; // <DEIN_MAKE_WEBHOOK_URL>
+
+      var form = document.getElementById("hunter-form");
+      var decisionBox = document.getElementById("decision");
+      var q7Radios = document.querySelectorAll("input[name=q7]");
+      var termInputs = document.getElementById("term-inputs");
+
+      function toggleTermInputs() {
+        var ja = document.querySelector("input[name=q7][value=ja]").checked;
+        termInputs.style.display = ja ? "grid" : "none";
+      }
+      q7Radios.forEach(function (r) { r.addEventListener("change", toggleTermInputs); });
+      toggleTermInputs();
+
+      function radioValue(name) {
+        var el = form.querySelector("input[name=" + name + "]:checked");
+        return el ? el.value : null;
+      }
+
+      function showDecision(pass, html) {
+        decisionBox.className = "decision-box " + (pass ? "pass" : "fail");
+        decisionBox.innerHTML = html;
+        decisionBox.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Honeypot: Bot-Falle, still verwerfen
+        if (form.querySelector("[name=company_hp]").value) return;
+
+        var name = form.querySelector("#name").value.trim();
+        var email = form.querySelector("#email").value.trim();
+        var consent = form.querySelector("[name=consent]").checked;
+        var q1Checked = form.querySelectorAll("input[name=q1]:checked").length;
+        var q2 = radioValue("q2"), q3 = radioValue("q3"), q4 = radioValue("q4"),
+            q5 = radioValue("q5"), q6 = radioValue("q6"), q7 = radioValue("q7"),
+            q8 = radioValue("q8"), q9 = radioValue("q9");
+        var q10 = form.querySelector("[name=q10]").value.trim();
+
+        // Vollständigkeit prüfen
+        if (!name || !email || !consent || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8 || !q9 || q10.length < 20) {
+          showDecision(false, "<h3>Bitte alle Pflichtfelder ausfüllen.</h3><p>Es fehlen noch Angaben oder die Abschlussfrage ist zu kurz beantwortet (mind. 20 Zeichen).</p>");
+          return;
+        }
+
+        // Ausschlusskriterien prüfen
+        var reasons = [];
+        if (q1Checked < 4) reasons.push("Hardware-/Setup-Anforderungen nicht vollständig erfüllt.");
+        if (q2 === "nein") reasons.push("Fixum-Anforderung passt nicht zum 100 % erfolgsorientierten Modell.");
+        if (q3 === "nein") reasons.push("Die Rolle erfordert eigenverantwortliches Arbeiten ohne enge Anleitung.");
+        if (q4 === "nein") reasons.push("Die Motivation passt nicht zu einer leistungs- und provisionsgetriebenen Rolle.");
+        if (q6 === "b1" || q6 === "a") reasons.push("Für diese Position ist mindestens Deutsch B2 erforderlich.");
+        if (q7 === "nein") reasons.push("Feste Terminverfügbarkeit zwischen 08:00–15:00 deutscher Zeit wird benötigt.");
+        if (q8 === "nein") reasons.push("Arbeiten mit MS-365 / Dynamics 365 / Webex ist Voraussetzung.");
+        if (q9 === "nein") reasons.push("Provisionsauszahlung per IBAN oder Wise ist erforderlich.");
+
+        var qualified = reasons.length === 0;
+
+        var payload = {
+          name: name, email: email,
+          q1_hardware_ok: q1Checked === 4,
+          q2: q2, q3: q3, q4: q4, q5: q5, q6: q6, q7: q7,
+          termin1: form.querySelector("[name=termin1]").value.trim(),
+          termin2: form.querySelector("[name=termin2]").value.trim(),
+          termin3: form.querySelector("[name=termin3]").value.trim(),
+          q8: q8, q9: q9, q10: q10,
+          status: qualified ? "qualifiziert" : "ausgeschlossen",
+          gruende: reasons,
+          zeitstempel: new Date().toISOString()
+        };
+
+        // Optionales Logging aller Antworten (bestanden + abgelehnt) via Webhook,
+        // unabhängig vom clientseitigen Ergebnis. Läuft nur, wenn WEBHOOK_URL gesetzt ist.
+        if (WEBHOOK_URL) {
+          fetch(WEBHOOK_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          }).catch(function () { /* Logging-Fehler blockieren die Bewerbung nicht */ });
+        }
+
+        if (!qualified) {
+          showDecision(false,
+            "<h3>Danke für deine Offenheit.</h3>" +
+            "<p>Nach deinen Angaben passt dieses Rollenprofil aktuell nicht zu dir:</p>" +
+            "<ul>" + reasons.map(function (r) { return "<li>" + r + "</li>"; }).join("") + "</ul>" +
+            "<p>Das ist keine Bewertung deiner Fähigkeiten – nur dieser konkreten, 100&nbsp;% erfolgsorientierten Remote-Rolle. " +
+            "Für viele ist ein klar strukturierter Corporate-Job mit Fixum die deutlich bessere und gesündere Wahl. " +
+            "Wir wünschen dir dabei viel Erfolg.</p>"
+          );
+          return;
+        }
+
+        showDecision(true, "<h3>Danke, deine Angaben passen zum Profil.</h3><p>Deine Bewerbung wird jetzt über dein E-Mail-Programm vorbereitet. Bitte Lebenslauf manuell anhängen und Mail absenden.</p>");
+
+        var subject = encodeURIComponent("Bewerbung B2B-Vertrieb (Hunter-Filter bestanden) – " + name);
+        var lines = [
+          "Name: " + name,
+          "E-Mail: " + email,
+          "Hardware/Setup: vollständig erfüllt",
+          "Erfolgsorientiert ohne Fixum: " + q2,
+          "Eigenverantwortlich: " + q3,
+          "Motivation (Leistung/Provision): " + q4,
+          "Erfahrung Telko/Glasfaser: " + q5,
+          "Deutschniveau: " + q6.toUpperCase(),
+          "Terminverfügbarkeit: " + q7,
+          "Terminvorschläge: " + [payload.termin1, payload.termin2, payload.termin3].filter(Boolean).join(" / "),
+          "Tools (MS365/Dynamics/Webex): " + q8,
+          "Auszahlung IBAN/Wise: " + q9,
+          "",
+          "Was bedeutet für dich Leistung?",
+          q10
+        ];
+        var body = encodeURIComponent(lines.join("\n"));
+        window.location.href = "mailto:bodo@remotesalesforce.asia?subject=" + subject + "&body=" + body;
+      });
+    })();
+  </script>
+</body>
+</html>
