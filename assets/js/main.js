@@ -24,8 +24,7 @@
     var serviceMap = {
       "resumee-check":   "Resümee-Check (25 USD)",
       "resumee-writing": "Resümee-Writing (50 USD)",
-      "coaching":        "Bewerber-Coaching (50 USD / 45 Min)",
-      "bewerbung":       "Bewerbung B2B-Vertrieb"
+      "coaching":        "Bewerber-Coaching (50 USD / 45 Min)"
     };
     var urlParam = new URLSearchParams(window.location.search).get("service");
     if (urlParam && serviceMap[urlParam]) {
