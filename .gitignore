@@ -11,3 +11,10 @@ Mein LinkedIn Profil.pdf
 Thumbs.db
 desktop.ini
 *.tmp
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
